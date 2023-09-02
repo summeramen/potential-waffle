@@ -79,6 +79,7 @@ int main() {
         fscanf(fp, "%s", &ping_str);
         if (*ping_str == '-') {
             ping = 1e+6;
+            // ハイフン表記のタイムアウトのping値を，1e+6と大きな値に設定した．
         } else {
             ping = atoi(ping_str);
         }
@@ -256,12 +257,6 @@ int main() {
                             "02d)\n",
                             h_be, min_be, sec_be, h_store[j][i],
                             min_store[j][i], sec_store[j][i]);
-                        y_err[j] = -99999;
-                        m_err[j] = -999;
-                        d_err[j] = -999;
-                        h_err[j] = -999;
-                        min_err[j] = -999;
-                        sec_err[j] = -999;
                         y_be = 0;
                         m_be = 0;
                         d_be = 0;
